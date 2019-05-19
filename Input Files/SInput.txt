@@ -1,0 +1,6 @@
+LI 5 # abc
+ST 1 # def
+AD 1 #hello
+ST 2
+LI 0
+BZ 0
