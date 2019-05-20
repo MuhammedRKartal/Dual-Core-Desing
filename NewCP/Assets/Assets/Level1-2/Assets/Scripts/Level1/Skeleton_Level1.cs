@@ -29,8 +29,9 @@ public class Skeleton_Level1 : MonoBehaviour
         {
             anim.Play("Death1");
             this.enabled = false;
-            SceneManager.LoadScene("You Win");
-
+            string x = dusman.name;
+            string scenename = "YouWin" + "" +x;
+            SceneManager.LoadScene(scenename);
         }
         else
         {

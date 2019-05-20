@@ -291,34 +291,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!21 &731898496
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'mefMaterial
-
-    -42736'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: dcb2dff2968e40c385ee44978dc24609, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1001 &803780338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -418,44 +390,13 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 803780338}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1492973778
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1492973779}
-  m_Layer: 0
-  m_Name: "Bo\u015F"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1492973779
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492973778}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.793958, y: -12.628824, z: -10.904754}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1145524317}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &2065953050
+--- !u!43 &1490763225
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ImageTargetMesh-42726
+  m_Name: ImageTargetMesh-40644
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -609,6 +550,37 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1492973778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492973779}
+  m_Layer: 0
+  m_Name: "Bo\u015F"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1492973779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492973778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.793958, y: -12.628824, z: -10.904754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1145524317}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7827727997765059606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -680,21 +652,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 731898496}
+      objectReference: {fileID: 0}
     - target: {fileID: 7827727998267070805, guid: 4801080b398a86849b98066a17ee7316,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 2065953050}
+      objectReference: {fileID: 1490763225}
     - target: {fileID: 7827727999023026553, guid: 4801080b398a86849b98066a17ee7316,
         type: 3}
       propertyPath: hero.baseHP
-      value: 1000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7827727999023026553, guid: 4801080b398a86849b98066a17ee7316,
         type: 3}
       propertyPath: hero.curHP
-      value: 1000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3579892761690507409, guid: 4801080b398a86849b98066a17ee7316,
         type: 3}

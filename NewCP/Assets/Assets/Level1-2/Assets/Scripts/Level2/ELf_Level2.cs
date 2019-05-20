@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ELf_Level2 : MonoBehaviour
 {
+    public Transform hero;
     public Transform Enemy1;
     public Transform Enemy2;
     static Animator anim;
@@ -22,7 +24,7 @@ public class ELf_Level2 : MonoBehaviour
         LoadInfo.LoadAllInfo();
         HPELF.maxValue += GameInfo.Vitality;
         HPELF.value += GameInfo.Vitality;
-        damage += GameInfo.Strenght / 8;
+        damage += GameInfo.Strenght;
     }
 
     // Update is called once per frame
@@ -30,13 +32,19 @@ public class ELf_Level2 : MonoBehaviour
     {
         if (HPenemy.value <= 0 && HPenemy2.value <= 0)
         {
-            anim.Play("idle");
+            anim.Play("idle");           
             this.enabled = false;
+            string x = hero.name;
+            string scenename = "YouWin" + "" + x;
+            SceneManager.LoadScene(scenename);
         }
         if (HPELF.value <= 0)
         {
             anim.Play("Death");
             this.enabled = false;
+            string x = hero.name;
+            string scenename = "YouLose" + "" + x;
+            SceneManager.LoadScene(scenename);
         }
         else
         {

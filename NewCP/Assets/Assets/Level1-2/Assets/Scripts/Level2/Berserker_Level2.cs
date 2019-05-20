@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Berserker_Level2 : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Transform hero;
     public Transform Enemy1;
     public Transform Enemy2;
     static Animator anim;
@@ -22,7 +24,7 @@ public class Berserker_Level2 : MonoBehaviour
 
         HPBerserker.maxValue += GameInfo.Vitality;
         HPBerserker.value += GameInfo.Vitality;
-        damage += GameInfo.Strenght / 8;
+        damage += GameInfo.Strenght/8 ;
 
     }
 
@@ -33,11 +35,17 @@ public class Berserker_Level2 : MonoBehaviour
         {
             anim.Play("idle");
             this.enabled = false;
+            string x = hero.name;
+            string scenename = "YouWin" + "" + x;
+            SceneManager.LoadScene(scenename);
         }
         if (HPBerserker.value <= 0)
         {
             anim.Play("Death");
             this.enabled = false;
+            string x = hero.name;
+            string scenename = "YouLose" + "" + x;
+            SceneManager.LoadScene(scenename);
         }
         else
         {

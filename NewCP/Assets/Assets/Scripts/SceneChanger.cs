@@ -8,13 +8,17 @@ public class SceneChanger : MonoBehaviour
     public static bool isB = true;
     public static int levelCounter = 1;
     public static int transfergold = 0;
+    public static bool isReward = false;
+    private bool toforge = false;
 
 
 
 
     public void toForgePage()
     {
+        toforge = true;
         SceneManager.LoadScene("ForgePage");
+
     }
     public void toTheBar()
     {
@@ -22,7 +26,8 @@ public class SceneChanger : MonoBehaviour
     }
     public void toTheCityWin()
     {
-        transfergold= 20;
+        isReward = true;
+        transfergold = 20;
         levelCounter++;
         Debug.Log("Level : " + levelCounter);
         SceneManager.LoadScene("TheCity");
@@ -34,17 +39,27 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("TheCity");
 
     }
+    public void toTheCityFromforge()
+    {
+        if (GameInfo.Gold > 0)
+        {
+
+        }
+        SaveInfo.SaveAllInfo();
+        SceneManager.LoadScene("TheCity");
+
+    }
 
 
     public void ArenaButton()
     {
 
         //level 1 
-        if (isB && levelCounter==1)
+        if (isB && levelCounter == 1)
         {
             SceneManager.LoadScene("Scene1_Dialog_(B)");
         }
-        else if(isB==false && levelCounter==1)
+        else if (isB == false && levelCounter == 1)
         {
             SceneManager.LoadScene("Scene1_Dialog_(E)");
         }

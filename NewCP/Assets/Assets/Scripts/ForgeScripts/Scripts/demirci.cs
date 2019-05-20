@@ -31,12 +31,9 @@ public class demirci : MonoBehaviour
         goldPanel.SetActive(false);
         interactButton.SetActive(true);
         anim = GetComponent<Animator>();
-        LoadInfo.LoadAllInfo();
+
         gold = GameInfo.Gold;
 
-        gold -= 20;
-        GameInfo.Gold = 0;
-        SaveInfo.SaveAllInfo();
 
 
     }
@@ -49,6 +46,7 @@ public class demirci : MonoBehaviour
             anim.Play("Stun");
             x = false;
         }
+
 
     }
 
@@ -79,7 +77,9 @@ public class demirci : MonoBehaviour
             Debug.Log("before Vital" + GameInfo.Vitality);
             GameInfo.Vitality += 5;
             SaveInfo.SaveAllInfo();
+
             Debug.Log("after vital" + GameInfo.Vitality);
+            GameInfo.Gold -= GoldAmount;
 
         }
     }
@@ -94,6 +94,7 @@ public class demirci : MonoBehaviour
             GameInfo.Strenght += 5;
             SaveInfo.SaveAllInfo();
             Debug.Log("after strenght" + GameInfo.Strenght);
+            GameInfo.Gold -= GoldAmount;
 
         }
     }
@@ -108,6 +109,7 @@ public class demirci : MonoBehaviour
             GameInfo.Toughness += 5;
             SaveInfo.SaveAllInfo();
             Debug.Log("after Toughness" + GameInfo.Toughness);
+            GameInfo.Gold -= GoldAmount;
 
         }
     }
@@ -122,6 +124,7 @@ public class demirci : MonoBehaviour
             GameInfo.Intelligence += 5;
             SaveInfo.SaveAllInfo();
             Debug.Log("after Intelligence" + GameInfo.Intelligence);
+            GameInfo.Gold -= GoldAmount;
 
         }
     }

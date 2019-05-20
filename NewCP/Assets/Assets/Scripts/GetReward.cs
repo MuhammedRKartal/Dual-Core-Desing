@@ -11,8 +11,12 @@ public class GetReward : MonoBehaviour
     }
     public void getReward()
     {
+        if (SceneChanger.isReward == true)
+        {
 
-        GameInfo.Gold += SceneChanger.transfergold;
+            GameInfo.Gold += SceneChanger.transfergold;
+            SceneChanger.isReward = false;
+        }
         SaveInfo.SaveAllInfo();
         Debug.Log(GameInfo.Gold);
     }

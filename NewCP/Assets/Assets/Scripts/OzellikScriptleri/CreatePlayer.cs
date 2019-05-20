@@ -50,7 +50,8 @@ public class CreatePlayer : MonoBehaviour
         LoadInfo.LoadAllInfo();
         if(GameInfo.PlayerClass != null)
         {
-            SceneManager.LoadScene("TestScene");
+            SceneManager.LoadScene("TheCity");
+           
         }  
     }
 
@@ -68,7 +69,9 @@ public class CreatePlayer : MonoBehaviour
         newPlayer.Intelligence = newPlayer.PlayerClass.Intelligence;
         newPlayer.Toughness = newPlayer.PlayerClass.Toughness;
         //Update UI
+        SceneChanger.isB = false;
         updateUI();
+        
     }
     public void SetBerserkerClass()
     {
@@ -83,7 +86,9 @@ public class CreatePlayer : MonoBehaviour
         newPlayer.Intelligence = newPlayer.PlayerClass.Intelligence;
         newPlayer.Toughness = newPlayer.PlayerClass.Toughness;
         //Update UI
+        SceneChanger.isB = true;
         updateUI();
+        
     }
     void updateUI()
     {

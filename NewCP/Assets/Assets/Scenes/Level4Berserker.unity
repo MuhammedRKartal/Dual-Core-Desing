@@ -556,5 +556,15 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 663777937}
+    - target: {fileID: 941542263580006969, guid: 6773470bcb87b274bb9886dd5c3700fb,
+        type: 3}
+      propertyPath: hero.baseHP
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 941542263580006969, guid: 6773470bcb87b274bb9886dd5c3700fb,
+        type: 3}
+      propertyPath: hero.curHP
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6773470bcb87b274bb9886dd5c3700fb, type: 3}

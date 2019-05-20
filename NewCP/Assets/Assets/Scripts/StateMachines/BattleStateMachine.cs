@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BattleStateMachine : MonoBehaviour
@@ -59,6 +60,9 @@ public class BattleStateMachine : MonoBehaviour
     public int selectedSpellNumber;
 
     private List<GameObject> enemyBtns = new List<GameObject>();
+    private string heroname;
+    private string youwin;
+    private string youlose;
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +75,10 @@ public class BattleStateMachine : MonoBehaviour
 
         battleStates = PerformAction.WAIT;
         HeroesInGame.AddRange(GameObject.FindGameObjectsWithTag("Hero"));
+        heroname = HeroesInGame[0].name;
+        youwin = "YouWin" + heroname;
+        youlose = "YouLose" + heroname;
+
         EnemiesInGame.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
 
         HeroInput = HeroGUI.ACTIVATE;
@@ -176,6 +184,8 @@ public class BattleStateMachine : MonoBehaviour
 
             case (PerformAction.LOSE):
                 Debug.Log("You LOSE the battle");
+                
+                SceneManager.LoadScene(youlose);
                 break;
 
             case (PerformAction.WIN):
@@ -184,6 +194,7 @@ public class BattleStateMachine : MonoBehaviour
                 {
                     HeroesInGame[i].GetComponent<HeroStateMachine>().currentState = HeroStateMachine.TurnState.WAITING;
                 }
+                SceneManager.LoadScene(youwin);
                 break;
 
 
