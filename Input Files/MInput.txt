@@ -1,8 +1,0 @@
-LI 0 1
-LI 1 2
-ST X 0
-LI 0 3
-LI 1 4
-AD X 0
-ST X 1
-MV 1 1 2

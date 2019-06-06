@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
-  <Tracking>
-    <ImageTarget name="hedef" size="3.000000 3.000000" />
-    <ImageTarget name="mef" size="5.000000 6.589862" />
-    <ImageTarget name="mainarenatry" size="5.000000 3.633952" />
-    <ImageTarget name="spawnpoint" size="5.000000 4.948718" />
-  </Tracking>
-</QCARConfig>
